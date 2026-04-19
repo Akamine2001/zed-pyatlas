@@ -63,9 +63,11 @@ To point the extension at a specific binary (for example a local release build):
 
 Binaries are published for:
 
-- macOS (x86_64, aarch64)
+- macOS (aarch64 / Apple Silicon)
 - Linux (x86_64, aarch64)
 - Windows (x86_64)
+
+Intel Macs are not currently supported; set `lsp.pyatlas.binary.path` in your Zed settings to point at a locally built binary if you need to run on that platform.
 
 ## License
 
