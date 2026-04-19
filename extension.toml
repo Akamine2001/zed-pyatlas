@@ -1,0 +1,11 @@
+id = "pyatlas"
+name = "pyatlas"
+version = "0.1.0"
+schema_version = 1
+authors = ["Akamine2001"]
+description = "Python auto-import LSP companion for basedpyright"
+repository = "https://github.com/Akamine2001/zed-pyatlas"
+
+[language_servers.pyatlas]
+name = "pyatlas"
+languages = ["Python"]
