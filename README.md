@@ -2,13 +2,13 @@
 
 Zed extension for [pyatlas](https://github.com/Akamine2001/pyatlas), a Python auto-import LSP companion for basedpyright.
 
-The extension registers `pyatlas` as a language server in Zed and downloads the matching prebuilt binary for your platform from the pyatlas GitHub Releases.
+The extension registers `pyatlas-lsp` as a language server in Zed and downloads the matching prebuilt binary for your platform from the pyatlas GitHub Releases.
 
 ## Installation
 
 ### From the Zed extensions marketplace
 
-Open the Zed command palette (`cmd+shift+p`), run `zed: extensions`, search for `pyatlas`, and click Install.
+Open the Zed command palette (`cmd+shift+p`), run `zed: extensions`, search for `pyatlas-lsp`, and click Install.
 
 ### As a dev extension (for local development)
 
@@ -19,13 +19,13 @@ Open the Zed command palette (`cmd+shift+p`), run `zed: extensions`, search for 
 
 ## Configuration
 
-Enable `pyatlas` alongside basedpyright in your `.zed/settings.json`:
+Enable `pyatlas-lsp` alongside basedpyright in your `.zed/settings.json`:
 
 ```jsonc
 {
   "languages": {
     "Python": {
-      "language_servers": ["basedpyright", "pyatlas", "!pyright", "!pylsp", "ruff"],
+      "language_servers": ["basedpyright", "pyatlas-lsp", "!pyright", "!pylsp", "ruff"],
       "show_completions_on_input": true
     }
   }
@@ -38,7 +38,7 @@ basedpyright handles type checking, hover, and go-to-definition, while pyatlas h
 
 On first launch the extension resolves the `pyatlas` binary in the following order:
 
-1. `lsp.pyatlas.binary.path` in settings, if set
+1. `lsp.pyatlas-lsp.binary.path` in settings, if set
 2. `pyatlas` found on `$PATH`
 3. Prebuilt binary for your platform, downloaded from the [pyatlas GitHub Releases](https://github.com/Akamine2001/pyatlas/releases) and cached under the extension's work directory
 
@@ -49,7 +49,7 @@ To point the extension at a specific binary (for example a local release build):
 ```jsonc
 {
   "lsp": {
-    "pyatlas": {
+    "pyatlas-lsp": {
       "binary": {
         "path": "/absolute/path/to/pyatlas",
         "arguments": ["lsp"]
@@ -67,7 +67,7 @@ Binaries are published for:
 - Linux (x86_64, aarch64)
 - Windows (x86_64)
 
-Intel Macs are not currently supported; set `lsp.pyatlas.binary.path` in your Zed settings to point at a locally built binary if you need to run on that platform.
+Intel Macs are not currently supported; set `lsp.pyatlas-lsp.binary.path` in your Zed settings to point at a locally built binary if you need to run on that platform.
 
 ## License
 

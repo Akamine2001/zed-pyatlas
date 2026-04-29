@@ -1,11 +1,11 @@
-id = "pyatlas"
-name = "pyatlas"
-version = "0.1.0"
+id = "pyatlas-lsp"
+name = "pyatlas-lsp"
+version = "0.1.1"
 schema_version = 1
-authors = ["Akamine2001"]
+authors = ["Akamine2001 <120542534+Akamine2001@users.noreply.github.com>"]
 description = "Python auto-import LSP companion for basedpyright"
 repository = "https://github.com/Akamine2001/zed-pyatlas"
 
-[language_servers.pyatlas]
-name = "pyatlas"
+[language_servers.pyatlas-lsp]
+name = "pyatlas-lsp"
 languages = ["Python"]
